@@ -26,6 +26,14 @@
       "jest": true
     },
     "rules": {
+      "react/jsx-no-bind": ["error", {
+        "allowArrowFunctions": true,
+        "allowBind": false,
+        "ignoreRefs": true
+      }],
+      "react/no-unknown-property": false,
+      "react/no-did-update-set-state": "error",
+      "react/react-in-jsx-scope": "error",
       "react/prop-types": false
     }
   },
