@@ -24,6 +24,9 @@
     },
     "env": {
       "jest": true
+    },
+    "rules": {
+      "react/prop-types": false
     }
   },
   "eslintIgnore": [
