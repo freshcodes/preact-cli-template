@@ -4,7 +4,9 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
+    "start": "per-env",
+    "start:production": "npm run -s serve",
+    "start:development": "npm run -s dev",
     "build": "preact build --no-service-worker --template src/template.html --prerenderUrls prerender-urls.json",
     "serve": "preact build --no-service-worker --template src/template.html --prerenderUrls prerender-urls.json && preact serve",
     "dev": "preact watch --template src/template.html",
@@ -51,8 +53,8 @@
     "eslint-plugin-react": "^7.11.1",
     "eslint-plugin-standard": "^4.0.0",
     "identity-obj-proxy": "^3.0.0",
-    "if-env": "^1.0.0",
     "jest": "^23.6.0",
+    "per-env": "^1.0.2",
     "preact-cli": "^2.1.0",
     "preact-render-spy": "^1.2.1",
     "workbox-webpack-plugin": "^3.6.2"
