@@ -10,7 +10,7 @@
     "build": "preact build --no-service-worker --template src/template.html --prerenderUrls prerender-urls.json",
     "serve": "preact build --no-service-worker --template src/template.html --prerenderUrls prerender-urls.json && preact serve",
     "dev": "preact watch --template src/template.html",
-    "lint": "eslint --fix src",
+    "lint": "eslint --fix src tests",
     "test": "jest ./tests"
   },
   "eslintConfig": {
@@ -28,11 +28,14 @@
       "jest": true
     },
     "rules": {
-      "react/jsx-no-bind": ["error", {
-        "allowArrowFunctions": true,
-        "allowBind": false,
-        "ignoreRefs": true
-      }],
+      "react/jsx-no-bind": [
+        "error",
+        {
+          "allowArrowFunctions": true,
+          "allowBind": false,
+          "ignoreRefs": true
+        }
+      ],
       "react/no-unknown-property": false,
       "react/no-did-update-set-state": "error",
       "react/react-in-jsx-scope": "error",
@@ -47,7 +50,7 @@
     "eslint": "^5.6.1",
     "eslint-config-standard": "^12.0.0",
     "eslint-config-standard-react": "^7.0.2",
-    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-import": "^2.17.1",
     "eslint-plugin-node": "^8.0.0",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-react": "^7.11.1",
@@ -57,10 +60,10 @@
     "per-env": "^1.0.2",
     "preact-cli": "^2.1.0",
     "preact-render-spy": "^1.2.1",
-    "workbox-webpack-plugin": "^3.6.2"
+    "workbox-webpack-plugin": "^4.3.0"
   },
   "dependencies": {
-    "copy-webpack-plugin": "^4.5.3",
+    "copy-webpack-plugin": "^4.6.0",
     "preact": "^8.3.1",
     "preact-router": "^2.5.7"
   },
